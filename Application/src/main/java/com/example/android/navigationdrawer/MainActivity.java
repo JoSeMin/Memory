@@ -39,6 +39,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        startActivity(new Intent(this,SplahsActivity.class));
 
         // Prepare list of samples in this dashboard.
         mSamples = new Sample[]{

@@ -33,6 +33,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -229,7 +230,7 @@ public class NavigationDrawerActivity extends Activity implements PlanetAdapter.
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_planet, container, false);
+            /*View rootView = inflater.inflate(R.layout.fragment_planet, container, false);
             int i = getArguments().getInt(ARG_PLANET_NUMBER);
             String planet = getResources().getStringArray(R.array.planets_array)[i];
 
@@ -239,6 +240,20 @@ public class NavigationDrawerActivity extends Activity implements PlanetAdapter.
             iv.setImageResource(imageId);
 
             getActivity().setTitle(planet);
+            return rootView;*/
+            View rootView=null;
+            int i = getArguments().getInt(ARG_PLANET_NUMBER);
+            String planet = getResources().getStringArray(R.array.planets_array)[i];
+            int imageId=0;
+            ImageView iv=null;
+            if(i==0){
+                rootView = inflater.inflate(R.layout.fragment_family, container, false);
+            }else if(i==1){
+                rootView = inflater.inflate(R.layout.fragment_friend, container, false);
+            }else{
+                rootView = inflater.inflate(R.layout.fragment_teacher, container, false);
+            }
+
             return rootView;
         }
     }

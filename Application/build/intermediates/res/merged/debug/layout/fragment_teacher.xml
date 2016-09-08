@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="선생님"
+        android:layout_gravity="right"
+        />
+    <ImageView
+        android:id="@+id/img_teacher"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/img_teacher"
+        android:gravity="center"
+        android:padding="32dp"
+        />
+</LinearLayout>
