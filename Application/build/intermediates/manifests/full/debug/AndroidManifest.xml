@@ -45,6 +45,7 @@
         <activity
             android:name="com.example.android.navigationdrawer.SplahsActivity"
             android:theme="@android:style/Theme.NoTitleBar" />
+        <activity android:name="com.example.android.navigationdrawer.ViewPagerActivity" />
     </application>
 
 </manifest>
